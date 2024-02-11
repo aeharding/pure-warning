@@ -1,6 +1,17 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import ExploreContainer from "../components/ExploreContainer";
+import "./Home.css";
+import { styled } from "@linaria/react";
+
+const Header = styled(IonHeader)`
+  text-transform: uppercase;
+`;
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +28,7 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer />
+        <Header />
       </IonContent>
     </IonPage>
   );
